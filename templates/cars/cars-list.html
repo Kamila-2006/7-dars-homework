@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car List</title>
+</head>
+<body>
+    <h1>Car List</h1>
+    {% for car in cars %}
+        <h2>{{ car.name }}</h2>
+    {% empty %}
+        <h2>There is no cars</h2>
+    {% endfor %}
+    <a href="{% url 'cars:create' %}">Add New Car</a>
+</body>
+</html>
